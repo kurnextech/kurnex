@@ -1,14 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #172033;
+  --muted: #5c667a;
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --border: #e4e8f0;
+}
+
 body {
-  font-family: Arial;
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
 }
 
-h1 {
-  color: #2c3e50;
+.header {
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  color: white;
+  padding: 56px 20px;
+  text-align: center;
 }
 
-a {
-  color: #3498db;
+.header h1 {
+  margin: 0 0 10px;
+  font-size: 42px;
+}
+
+.header p {
+  margin: 0;
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+.nav {
+  background: white;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  padding: 14px 10px;
+  position: sticky;
+  top: 0;
+}
+
+.nav a {
+  display: inline-block;
+  color: var(--primary);
+  text-decoration: none;
+  margin: 6px 12px;
+  font-weight: 700;
+}
+
+.nav a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 980px;
+  margin: 32px auto;
+  padding: 0 18px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 25px rgba(20, 35, 70, 0.06);
+  margin-bottom: 22px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.feature {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+}
+
+.feature h3 {
+  margin-top: 0;
+  color: var(--primary-dark);
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+}
+
+h2 {
+  margin-top: 32px;
+  color: #10204a;
+}
+
+ul {
+  padding-left: 22px;
+}
+
+.notice {
+  background: #eef4ff;
+  border-left: 5px solid var(--primary);
+  padding: 16px 18px;
+  border-radius: 12px;
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 28px 12px 40px;
+  font-size: 14px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.button:hover {
+  background: var(--primary-dark);
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 34px;
+  }
+
+  .card {
+    padding: 22px;
+  }
 }
