@@ -1,0 +1,2 @@
+# kurnex
+finance app
